@@ -1,6 +1,7 @@
 package main
 
 import (
+	"alexandria/internal/atomicfile"
 	"bytes"
 	"crypto/ed25519"
 	"crypto/rand"
@@ -82,7 +83,7 @@ func TestConcurrentReviewPreservesWinner(t *testing.T) {
 	results := make(chan error, 8)
 	for i := 0; i < cap(results); i++ {
 		wg.Add(1)
-		go func() { defer wg.Done(); results <- writeNew(path, []byte("complete packet")) }()
+		go func() { defer wg.Done(); results <- atomicfile.Write(path, []byte("complete packet"), false) }()
 	}
 	wg.Wait()
 	close(results)

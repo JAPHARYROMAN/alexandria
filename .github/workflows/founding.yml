@@ -1,4 +1,4 @@
-name: Phase 1 checks
+name: Alexandria repository checks
 on: [push, pull_request]
 permissions:
   contents: read
@@ -38,3 +38,6 @@ jobs:
           openssl pkey -in "$work/key" -pubout -out "$work/public"
           openssl pkeyutl -sign -rawin -inkey "$work/key" -in "$work/review" -out "$work/signature"
           go run ./cmd/alexandria verify -owner-key "$work/public" -signature "$work/signature"
+      - name: Exercise two reader processes and an offline withdrawal
+        if: runner.os == 'Linux'
+        run: bash integration/two-nodes.sh

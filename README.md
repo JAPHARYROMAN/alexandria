@@ -2,11 +2,17 @@
 
 Alexandria is an open-source global knowledge repository in development. The founder owns the official platform and decides its policy, releases, roadmap and node membership. Individual works carry their own credits and permissions.
 
-## Phase 1 � Founding terms
+## Phase 1 · Founding terms
 
 The Go command validates the founding charter and seed collection, shows what the proposed official nodes may copy, and verifies an owner-signed decision. Its five internal test records cover two collections, **Reading the Sky** and the **General Reading Room**. They include a reusable Wikidata extract, two original sample texts and two external links. The original sample texts can be distributed with this source code as test fixtures. Their catalogue settings simulate the handling of private submissions.
 
-Phase 1 closed on 19 November 2026 under the founder's explicit delegation. Apache-2.0 governs the software. The first reusable source is the English label and description from Wikidata's Moon record, item Q405. The seed manifest identifies the revision, credit and CC0 evidence. [Founding decision](platform/founding/decision.md) � [Software licence](LICENSE)
+Phase 1 closed on 19 November 2026 under the founder's explicit delegation. Apache-2.0 governs the software. The first reusable source is the English label and description from Wikidata's Moon record, item Q405. The seed manifest identifies the revision, credit and CC0 evidence. [Founding decision](platform/founding/decision.md) · [Software licence](LICENSE)
+
+## Phase 2 · Repository foundation
+
+The first repository milestone runs a signing publisher, an HTTP origin for the latest catalogue, and two independently restartable reader nodes. A node serves a record or a specific line under the same identifier on either node. Each public response checks the current signed catalogue. A withdrawal returns HTTP 410 for the record and all its versioned citations. Unavailable or invalid authority data returns HTTP 503.
+
+[Run the two-node example and see its operating limits](platform/REPOSITORY.md)
 
 ## Run locally
 

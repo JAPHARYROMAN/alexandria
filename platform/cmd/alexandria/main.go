@@ -2,13 +2,13 @@
 package main
 
 import (
+	"alexandria/internal/atomicfile"
 	"encoding/json"
 	"errors"
 	"flag"
 	"fmt"
 	"io"
 	"os"
-	"path/filepath"
 
 	"alexandria/internal/founding"
 )
@@ -97,7 +97,7 @@ func run(args []string, out, diagnostics io.Writer) error {
 		if path == "" {
 			return errors.New("review requires -out PATH")
 		}
-		if err := writeNew(path, packet); err != nil {
+		if err := atomicfile.Write(path, packet, false); err != nil {
 			return err
 		}
 		_, err = fmt.Fprintf(out, "Review packet written. SHA-256 %s\n", founding.Digest(packet))
@@ -125,24 +125,4 @@ func printJSON(w io.Writer, v any) error {
 	enc := json.NewEncoder(w)
 	enc.SetIndent("", "  ")
 	return enc.Encode(v)
-}
-
-// Publish the complete file once. Concurrent reviews cannot overwrite one another.
-func writeNew(path string, data []byte) error {
-	tmp, err := os.CreateTemp(filepath.Dir(path), ".alexandria-review-*")
-	if err != nil {
-		return err
-	}
-	defer os.Remove(tmp.Name())
-	if _, err = tmp.Write(data); err == nil {
-		err = tmp.Sync()
-	}
-	closeErr := tmp.Close()
-	if err != nil {
-		return err
-	}
-	if closeErr != nil {
-		return closeErr
-	}
-	return publishNew(tmp.Name(), path)
 }
