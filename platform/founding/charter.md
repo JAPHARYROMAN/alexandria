@@ -4,11 +4,11 @@
 
 Alexandria is a global, open-source knowledge repository with a decentralized official network. Its founder is the sole owner of the official platform. The owner reserves the final decision over scope, official releases, software licence, policy, budget, roadmap, official domains, appointments and network admission. Editors and operators act under delegations the owner can revoke. An independent custodian is optional in the distant future.
 
-The full public release includes the Library, Universal Search, the Global Knowledge Crawler, the Media Centre, source discussions, the Academy, platform reviews and the in-app Community Forum. Readers may explore accepted and refuted claims, beliefs, historical accounts and predictions. Each assessment should identify its author, date, evidence and uncertainty. Preserve original languages and credit translations. Internal milestones precede the owner’s public release decision.
+The full public release includes the Library, Universal Search, the Global Knowledge Crawler, the Media Centre, source discussions, the Academy, platform reviews and the in-app Community Forum. Readers may explore accepted and refuted claims, beliefs, historical accounts and predictions. Each assessment should identify its author, date, evidence and uncertainty. Preserve original languages and credit translations. Internal milestones precede the owner's public release decision.
 
 ## Code and collections
 
-The software licence proposed for the owner’s approval is identified in the manifest. Its full terms apply to a future official code release once the owner authorizes publication and the release includes the licence text and required notices. Developers may propose patches with tests and provenance. The owner or an appointed maintainer reviews changes. Only an owner-authorized release is official. Under the selected open-source licence developers may fork and self-host. A separate installation must identify its operator and requires the owner’s authorization to join the official network.
+The project's software is licensed under Apache-2.0. The repository includes the licence text. The manifest records separate permissions for the seed material. Developers may propose patches with tests and provenance. The owner or an appointed maintainer reviews changes. Only an owner-authorized release is official. Under the selected open-source licence developers may fork and self-host. A separate installation must identify its operator and requires the owner's authorization to join the official network.
 
 Each source has its own terms. Record the title, credit as supplied, original language, basis for holding the item, and permitted audience and uses. Creators retain control over permissions they can grant. Online availability alone is insufficient to copy a work. Reading the Sky collects observations, explanations and historical interpretations. The General Reading Room spans disciplines, traditions, testimony and methods of inquiry.
 
@@ -22,7 +22,7 @@ Moderators handle harassment, exposure of private information and false attribut
 
 ## Official nodes
 
-The proposed network starts with two owner-operated nodes in separate hosting environments. Both use the same signed official changes, stable source identifiers and current permissions. A reviewed reusable source can travel with its credit, origin and terms. A link-only record carries Alexandria’s public description and link. Private originals, pending submissions and withdrawn records stay outside replication. A restriction takes precedence over an older grant. Phase 1 emits a replication plan for inspection. Phase 2 delivers transport, change ordering, recovery and enforcement at the serving boundary.
+The proposed network starts with two owner-operated nodes in separate hosting environments. Both use the same signed official changes, stable source identifiers and current permissions. A reviewed reusable source can travel with its credit, origin and terms. A link-only record carries Alexandria's public description and link. Private originals, pending submissions and withdrawn records stay outside replication. A restriction takes precedence over an older grant. Phase 1 emits a replication plan for inspection. Phase 2 delivers transport, change ordering, recovery and enforcement at the serving boundary.
 
 ## Community direction after full launch
 
@@ -30,4 +30,4 @@ A reader can submit a platform review in their language or open a proposal in th
 
 ## Founding approval
 
-The owner reviews the entire packet, including the collection terms, proposed software licence, release authority, first source and seed records. An approval applies only to the packet verified against the owner's independently pinned public key. A change to these terms or a record requires a fresh review. This decision closes Phase 1 and authorizes work on the repository foundation. Public deployment and publication of the official source distribution have their own release decision.
+The owner may decide directly or delegate the decision. Record the date, decision maker, basis of authority and digest of the exact founding packet. A detached signature may also be verified against a separately trusted owner key. A material change requires a fresh decision. Approval closes Phase 1 and authorizes work on the repository foundation. The owner retains authority over the public platform launch.

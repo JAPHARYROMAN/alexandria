@@ -70,7 +70,7 @@ func run(args []string, out, diagnostics io.Writer) error {
 	m := f.Manifest
 	switch cmd {
 	case "check":
-		_, err = fmt.Fprintf(out, "Valid draft: %d collections, %d records. Proposed licence: %s. First source: %s. Owner approval is a separate verification.\n", len(m.Collections), len(m.Records), m.SoftwareLicense, m.FirstSource)
+		_, err = fmt.Fprintf(out, "Valid founding packet: %d collections, %d records. Software licence: %s. First source: %s.\n", len(m.Collections), len(m.Records), m.SoftwareLicense, m.FirstSource)
 		return err
 	case "shelf":
 		records := m.Records

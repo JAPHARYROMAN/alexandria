@@ -2,11 +2,11 @@
 
 Alexandria is an open-source global knowledge repository in development. The founder owns the official platform and decides its policy, releases, roadmap and node membership. Individual works carry their own credits and permissions.
 
-## Phase 1 · Founding terms
+## Phase 1 � Founding terms
 
 The Go command validates the founding charter and seed collection, shows what the proposed official nodes may copy, and verifies an owner-signed decision. Its five internal test records cover two collections, **Reading the Sky** and the **General Reading Room**. They include a reusable Wikidata extract, two original sample texts and two external links. The original sample texts can be distributed with this source code as test fixtures. Their catalogue settings simulate the handling of private submissions.
 
-The candidate software licence is Apache-2.0. The proposed first source is the English label and description of the Moon from Wikidata item Q405. Its specific revision, credit and CC0 evidence are in the manifest. The owner’s approval of this packet is pending. Approval of Phase 1 authorizes the next engineering phase. The public platform release has a later decision.
+Phase 1 closed on 19 November 2026 under the founder's explicit delegation. Apache-2.0 governs the software. The first reusable source is the English label and description from Wikidata's Moon record, item Q405. The seed manifest identifies the revision, credit and CC0 evidence. [Founding decision](platform/founding/decision.md) � [Software licence](LICENSE)
 
 ## Run locally
 
@@ -24,7 +24,9 @@ go run ./cmd/alexandria replication-plan
 
 On Windows, use `go build -o alexandria.exe ./cmd/alexandria` for a named executable. Commands default to the `founding` directory. Pass `-dir` to use another proposal. The shelf and review packet contain internal material. The replication plan emits an eligible public projection and never sends data over the network.
 
-## Review and approve
+## Review a packet and verify an optional signature
+
+The dated founding decision records the delegated approval. The following procedure supports a separately signed decision when the owner chooses to issue one.
 
 1. Review [the charter](platform/founding/charter.md) and [the manifest](platform/founding/manifest.json). Check the collection scopes, proposed software licence, reserved release authority and first source. Provide changes before signing.
 2. From `platform`, export a packet to a fresh path in a private directory. On Unix the destination filesystem must support hard links. Windows uses a same-directory move. Existing files are preserved.
@@ -46,4 +48,4 @@ Validation and verification return a nonzero exit code on failure. Verification 
 
 Propose a focused change with its tests and permission evidence for any new source. Add real private submissions and owner signing material only to a separate protected workspace. The repository fixtures are intentionally safe to publish. Changes to official terms go back to the owner for approval. The charter describes how reviews and proposals in the future in-app Community Forum will guide releases.
 
-The project’s [founding paper](ALEXANDRIA_White_Paper.pdf) and [development roadmap](ALEXANDRIA_Development_Roadmap.docx) define the subsequent phases.
+The project's [founding paper](ALEXANDRIA_White_Paper.pdf) and [development roadmap](ALEXANDRIA_Development_Roadmap.docx) define the subsequent phases.
