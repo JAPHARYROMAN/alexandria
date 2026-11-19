@@ -127,7 +127,7 @@ func printJSON(w io.Writer, v any) error {
 	return enc.Encode(v)
 }
 
-// Link the complete temporary file into place. Concurrent reviews cannot overwrite one another.
+// Publish the complete file once. Concurrent reviews cannot overwrite one another.
 func writeNew(path string, data []byte) error {
 	tmp, err := os.CreateTemp(filepath.Dir(path), ".alexandria-review-*")
 	if err != nil {
@@ -144,5 +144,5 @@ func writeNew(path string, data []byte) error {
 	if closeErr != nil {
 		return closeErr
 	}
-	return os.Link(tmp.Name(), path)
+	return publishNew(tmp.Name(), path)
 }

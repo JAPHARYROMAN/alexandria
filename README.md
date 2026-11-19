@@ -27,7 +27,7 @@ On Windows, use `go build -o alexandria.exe ./cmd/alexandria` for a named execut
 ## Review and approve
 
 1. Review [the charter](platform/founding/charter.md) and [the manifest](platform/founding/manifest.json). Check the collection scopes, proposed software licence, reserved release authority and first source. Provide changes before signing.
-2. From `platform`, export a packet to a fresh path in a private directory. The destination filesystem must support hard links. Existing files are preserved.
+2. From `platform`, export a packet to a fresh path in a private directory. On Unix the destination filesystem must support hard links. Windows uses a same-directory move. Existing files are preserved.
 3. The owner reads the exported packet and signs those exact bytes using their own Ed25519 key. Keep the private key outside this repository and under the owner's control.
 4. Verify the current proposal using the detached signature and the owner's independently authenticated public key. An independent operator should obtain and pin the public key through an established owner-controlled channel. A key supplied with a proposal cannot establish the owner's identity.
 5. Keep the signature, exact packet, and trusted public-key fingerprint with the dated decision record. A changed proposal requires a new signature.
