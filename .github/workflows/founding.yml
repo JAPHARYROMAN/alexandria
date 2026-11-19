@@ -1,0 +1,40 @@
+name: Phase 1 checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  founding:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: platform
+        shell: bash
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version-file: platform/go.mod
+          cache: false
+      - name: Check formatting
+        run: test -z "$(gofmt -l ./cmd ./internal)"
+      - run: go vet ./...
+      - run: go test -count=1 ./...
+      - if: runner.os == 'Linux'
+        run: go test -race ./...
+      - run: go build ./...
+      - run: go run ./cmd/alexandria check
+      - name: Verify a disposable OpenSSL signature
+        if: runner.os == 'Linux'
+        run: |
+          work=$(mktemp -d)
+          trap 'rm -f "$work/review" "$work/key" "$work/public" "$work/signature" && rmdir "$work"' EXIT
+          go run ./cmd/alexandria review -out "$work/review"
+          openssl genpkey -algorithm Ed25519 -out "$work/key"
+          openssl pkey -in "$work/key" -pubout -out "$work/public"
+          openssl pkeyutl -sign -rawin -inkey "$work/key" -in "$work/review" -out "$work/signature"
+          go run ./cmd/alexandria verify -owner-key "$work/public" -signature "$work/signature"
