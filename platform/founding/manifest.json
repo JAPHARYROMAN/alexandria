@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "software_license": "Apache-2.0",
+  "first_source": "moon-identity",
+  "collections": [
+    {
+      "id": "reading-the-sky",
+      "title": "Reading the Sky"
+    },
+    {
+      "id": "general-reading-room",
+      "title": "General Reading Room"
+    }
+  ],
+  "records": [
+    {
+      "id": "moon-identity",
+      "collection": "reading-the-sky",
+      "title": "The Moon in Wikidata",
+      "language": "en",
+      "credit": "Wikidata contributors, item Q405",
+      "mode": "open-data",
+      "rights": "CC0-1.0",
+      "evidence": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "origin": "https://www.wikidata.org/w/index.php?oldid=2570553770&title=Q405",
+      "description": "A structured catalogue entry identifying the Moon. This extract contains the English label and description.",
+      "body": "Moon — Earth's only natural satellite."
+    },
+    {
+      "id": "moon-phases",
+      "collection": "reading-the-sky",
+      "title": "Moon phases",
+      "language": "en",
+      "credit": "NASA Science",
+      "mode": "external-link",
+      "rights": "link-only",
+      "evidence": "Alexandria supplies its own catalogue description and a link to the publisher.",
+      "origin": "https://science.nasa.gov/moon/moon-phases/",
+      "description": "Follow NASA’s guide to the Moon’s changing appearance."
+    },
+    {
+      "id": "sky-log",
+      "collection": "reading-the-sky",
+      "title": "A sky observer’s blank log",
+      "language": "en",
+      "credit": "Alexandria project, original working material",
+      "mode": "internal-original",
+      "rights": "internal-review",
+      "evidence": "Original test fixture distributed with the project. Its simulated deposit permits internal review of the template.",
+      "description": "A blank observation sheet for an internal editor to try.",
+      "body": "Local date and time:\nLocation and horizon:\nWhat I saw:\nConditions that affected the observation:\nWhat I inferred afterwards:"
+    },
+    {
+      "id": "question-card",
+      "collection": "general-reading-room",
+      "title": "Four questions to ask of an account",
+      "language": "en",
+      "credit": "Alexandria project, original working material",
+      "mode": "internal-original",
+      "rights": "internal-review",
+      "evidence": "Original test fixture distributed with the project. Its simulated deposit permits local reading and annotation by reviewers.",
+      "description": "A short editorial reading exercise.",
+      "body": "Who gave this account? What could they observe directly? Which details came from someone else? What could change your interpretation?"
+    },
+    {
+      "id": "cc-attribution",
+      "collection": "general-reading-room",
+      "title": "Understanding attribution",
+      "language": "en",
+      "credit": "Creative Commons",
+      "mode": "external-link",
+      "rights": "link-only",
+      "evidence": "Alexandria supplies its own catalogue description and a link to the publisher.",
+      "origin": "https://creativecommons.org/licenses/by/4.0/",
+      "description": "Read the publisher’s explanation of the CC BY 4.0 licence."
+    }
+  ]
+}

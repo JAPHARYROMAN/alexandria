@@ -1,0 +1,7 @@
+/platform/alexandria
+/platform/alexandria.exe
+/platform/.review/
+/owner-review/
+*.pem
+*.sig
+*.key
